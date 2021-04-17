@@ -590,3 +590,14 @@ const cssColorArray = [
     name: 'Yellow Green'
   },
 ];
+
+const background = document.getElementById('background');
+const colorText = document.getElementById('color-name');
+const changeColorBtn = document.querySelector('button');
+
+
+changeColorBtn.addEventListener('click', () => {
+  let randomNum = Math.floor(Math.random() * cssColorArray.length);
+  background.style.backgroundColor = cssColorArray[randomNum].color;
+  colorText.innerHTML = cssColorArray[randomNum].name;
+});
